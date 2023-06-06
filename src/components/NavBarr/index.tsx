@@ -6,11 +6,11 @@ import LinkItem from './LinkItem'
 
 export default function NavBarr () {
   return (
-    <div className='flex items-center gap-20 bg-cyan-400 rounded-lg p-2 m-5'>
-      <Link href='/'>
+    <div className='flex items-center gap-20 bg-cyan-400 rounded-lg p-2 my-5'>
+      <Link href='/' className='[@media(max-width:800px)]:hidden'>
         <Image className='rounded' src='./logo.svg' width='150' height='200' alt='logo' />
       </Link>
-      <div className='flex gap-10'>
+      <div className='flex gap-10 [@media(max-width:800px)]:gap-2'>
         {
           links.map(({ name, path }: link) => <LinkItem key={path} path={path} name={name} />)
         }
